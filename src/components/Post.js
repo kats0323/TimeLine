@@ -37,8 +37,8 @@ class Post extends Component {
         return (
             <div style={form}>
                 <form onSubmit={this.onSubmit}>
-                    <Input value={this.state.user} onChange={this.onChange} name="user" />
-                    <Input value={this.state.term} onChange={this.onChange} name="term" />
+                    <Input placeholder="user" value={this.state.user} onChange={this.onChange} name="user" />
+                    <Input placeholder="Message" value={this.state.term} onChange={this.onChange} name="term" />
                     <div style={{ paddingTop: "20px" }}>
                         <Button type="danger" htmlType="submit" size={"20px"}>Submit</Button>
                     </div>
