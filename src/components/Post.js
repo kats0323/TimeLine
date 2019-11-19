@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import {Button} from "antd";
 import {Input} from "antd";
 import TimeLine from "./TimeLine";
 
@@ -34,7 +35,9 @@ class Post extends Component {
             <div style={form}>
                 <form onSubmit={this.onSubmit}>
                 <Input value={this.state.term} onChange={this.onChange} />
-                <button>Submit</button>
+                    <div style={{paddingTop:"20px"}}>
+                        <Button type="danger" size={"20px"}>Submit</Button>
+                    </div>
                 </form>
                 <TimeLine items={this.state.items}/>
             </div>
