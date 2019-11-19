@@ -9,6 +9,7 @@ class TimeLine extends Component {
     }
     render() {
         const words = this.props.items;
+        console.log(words)
         const listItem = words.map((word) =>
             <li>{word}</li>
         );

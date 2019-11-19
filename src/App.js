@@ -42,7 +42,6 @@ export default class Parent extends Component {
   render() {
     return (
       <div>
-        <p></p>
         <form onSubmit={this.onSubmit}>
           <input value={this.state.user} onChange={this.onChange1} />
           <p></p>
