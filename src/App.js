@@ -14,6 +14,7 @@ export default class Parent extends Component {
     }
     return (
       <div className="App" style={body} >
+        <h1 style={{color:"white", letterSpacing:"20px", paddingTop:"1%"}}>Just a Chat</h1>
         <Post/>
       </div>
     )

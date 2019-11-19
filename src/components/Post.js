@@ -20,11 +20,9 @@ class Post extends Component {
     onSubmit = (event) => {
         event.preventDefault();
         this.setState({
-            user: '',
             term: '',
             items: [...this.state.items, { user: this.state.user, term: this.state.term }]
         });
-        console.log("submit", this.state.items)
     }
 
     render() {
@@ -38,10 +36,14 @@ class Post extends Component {
         return (
             <div style={form}>
                 <form onSubmit={this.onSubmit}>
-                    <Input placeholder="user" value={this.state.user} onChange={this.onChange} name="user" />
-                    <Input placeholder="Message" value={this.state.term} onChange={this.onChange} name="term" />
+                    <div style={{paddingTop:"1%"}}>
+                        <Input placeholder="user" value={this.state.user} onChange={this.onChange} name="user" />
+                    </div>
+                    <div style={{paddingTop:"1%"}}>
+                        <Input placeholder="Message" value={this.state.term} onChange={this.onChange} name="term" />
+                    </div>
                     <div style={{ paddingTop: "20px" }}>
-                        <Button type="danger" htmlType="submit" size={"20px"}>Submit</Button>
+                        <Button htmlType="submit" size={"large"}>Submit</Button>
                     </div>
                 </form>
                 <TimeLine items={this.state.items} />

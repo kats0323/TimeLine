@@ -15,15 +15,16 @@ class TimeLine extends Component {
         console.log(words)
         const listItem = words.map((word) =>
             <div>
-                <p key={word} >{word.user}</p>
+                <p key={word.user} >{word.user}</p>
 
-                <p key={word} >{word.term}</p>
+                <p key={word.term} >{word.term}</p>
             </div>
         )
+        const newlistItem = listItem.reverse()
         return (
-            <div style={{padding: '30px' }}>
-                <Card bordered={false} style={{ width: 300 }}>
-                    {listItem}
+            <div style={{paddingTop:"5%"}}>
+                <Card bordered={false} style={{ width: "100%", borderRadius:"12px" }}>
+                    {newlistItem}
                 </Card>
 
             </div >
