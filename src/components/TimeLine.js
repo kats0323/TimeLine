@@ -21,7 +21,7 @@ class TimeLine extends Component {
             </div>
         )
         return (
-            <div style={{ background: '#ECECEC', padding: '30px' }}>
+            <div style={{padding: '30px' }}>
                 <Card bordered={false} style={{ width: 300 }}>
                     {listItem}
                 </Card>

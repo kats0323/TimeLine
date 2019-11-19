@@ -29,6 +29,7 @@ class Post extends Component {
 
     render() {
         const form = {
+            backgroundColor:"none",
             paddingLeft: "25%",
             paddingRight: "25%",
             paddingTop: "1%",
