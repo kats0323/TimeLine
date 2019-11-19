@@ -9,25 +9,30 @@ class TimeLine extends Component {
         this.state = {}
     }
     render() {
-        return (
+
         const words = this.props.items;
 
-            console.log(words)
+        console.log(words)
         const listItem = words.map((word) =>
             <div>
-                <div style={{ background: '#ECECEC', padding: '30px' }}>
-                    <Card title={word.user} bordered={false} style={{ width: 300 }}>
+                <p key={word} >{word.user}</p>
 
-
-                        <p key={word} >{word.term}</p>
-                    </Card>
-                </div>
+                <p key={word} >{word.term}</p>
             </div>
-        );
         )
+        return (
+            <div style={{ background: '#ECECEC', padding: '30px' }}>
+                <Card bordered={false} style={{ width: 300 }}>
+                    {listItem}
+                </Card>
 
-
+            </div >
+        );
     }
 }
+
+
+
+
 
 export default TimeLine;
