@@ -1,56 +1,27 @@
 import React, { Component } from 'react';
-import TimeLine from "./components/TimeLine"
+import 'antd/dist/antd.css';
+import Post from "./components/Post";
 
-
+import { Layout } from 'antd';
+import './App.css';
+const { Header, Footer } = Layout;
 export default class Parent extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      term: '',
-      user: '',
-      items: []
-    }
+    console.log(props)
   }
-
-  onChange = (event) => {
-    this.setState({
-      term: event.target.value,
-
-
-    });
-  }
-
-  onChange1 = (event) => {
-    this.setState({
-      user: event.target.value,
-
-
-    });
-  }
-
-  onSubmit = (event) => {
-    event.preventDefault();
-    this.setState({
-      user: "",
-      term: '',
-      items: [...this.state.items, this.state.term, this.state.user]
-    });
-    console.log(this.state)
-  }
-
-
   render() {
+    const footer = {
+      position: "absolute",
+      bottom: "0",
+      width: "100vw",
+    }
     return (
-      <div>
-        <form onSubmit={this.onSubmit}>
-          <input value={this.state.user} onChange={this.onChange1} />
-          <p></p>
-          <textarea value={this.state.term} onChange={this.onChange} ></textarea>
-          <button>Submit</button>
-        </form>
-        <TimeLine items={this.state.items} />
-      </div >
+      <div className="App">
+        <Header />
+        <Post />
+        <Footer style={footer} />
+      </div>
     )
-
   }
 }

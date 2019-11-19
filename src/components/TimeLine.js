@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { Card } from "antd";
 
 
+
 class TimeLine extends Component {
     constructor(props) {
         super(props);
@@ -9,9 +10,10 @@ class TimeLine extends Component {
     }
     render() {
         const words = this.props.items;
+
         console.log(words)
         const listItem = words.map((word) =>
-            <li>{word}</li>
+            <p key={word} >{word}</p>
         );
         const listing = listItem.reverse()
 
@@ -19,7 +21,7 @@ class TimeLine extends Component {
             <div style={{ background: '#ECECEC', padding: '30px' }}>
                 <Card bordered={false} style={{ width: 300 }}>
 
-                    <li>{listing}</li>
+                    <p>{listing}</p>
 
                 </Card>
             </div>
