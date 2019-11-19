@@ -22,7 +22,7 @@ class Post extends Component {
         this.setState({
             user: '',
             term: '',
-            items: [...this.state.items, this.state.user, this.state.term]
+            items: [...this.state.items, { user: this.state.user, term: this.state.term }]
         });
         console.log("submit", this.state.items)
     }
