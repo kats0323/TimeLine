@@ -1,9 +1,10 @@
 const users = [];
 
 const addUser = ({id, name, room}) => {
-    // if user enters a room such as HELLOWORLD we need to lowercase and make it an individual word
+    console.log('Usersoo', name)
     name = name.trim().toLowerCase();
-    name = name.trim().toLowerCase();
+    room = room.trim().toLowerCase();
+
 
     const existingUser = users.find((user) => user.room === room && user.name === name);
 
@@ -11,11 +12,10 @@ const addUser = ({id, name, room}) => {
         return {error:"username is taken"}
     }
 
-    const user = {id, name, room};
+    const user = {user: {id, name, room}};
 
     users.push(user);
-
-    return(user)
+    return user
 }
 
 const removeUser = (id) => {
